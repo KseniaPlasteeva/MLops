@@ -67,6 +67,11 @@ if __name__ == "__main__":
         
         with open("student_model.pkl", "wb") as file:
             joblib.dump(best, file)
+        
+        print(f"Best params: {clf.best_params_}")
+        print(f"RMSE: {rmse:.3f}")
+        print(f"MAE: {mae:.3f}")
+        print(f"R2: {r2:.3f}")
     
     dfruns = mlflow.search_runs()
     path2model = dfruns.sort_values("metrics.r2", ascending=False).iloc[0]['artifact_uri'].replace("file://", "") + '/model'

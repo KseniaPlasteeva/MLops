@@ -1,0 +1,5 @@
+outs:
+- md5: 16c8be770689f3dbd5aa39f07633c93e
+  size: 41983
+  hash: md5
+  path: cars.csv
